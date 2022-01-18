@@ -1,1 +1,4 @@
-<p>photo-show works!</p>
+<div>
+  <button (click)="randomPhoto()" class="margin20">Fetch Random Photo</button>
+</div>
+<img *ngIf="photoUrl" [src]="photoUrl" alt="photoUrl">
