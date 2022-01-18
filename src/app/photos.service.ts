@@ -7,4 +7,12 @@ import { HttpClient } from "@angular/common/http";
 export class PhotosService {
 
   constructor(private http: HttpClient) {}
+
+  getPhoto() {
+    return this.http.get('https://api.unsplash.com/photos/random', {
+      headers: {
+        Authorization: 'Client-ID Cyw_HorkjwP7TkqEPsWL_WhyO5rFhTiSPH8OuhAEX54'
+      }
+    });
+  }
 }
